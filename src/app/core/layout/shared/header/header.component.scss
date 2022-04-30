@@ -1,21 +1,21 @@
-mat-toolbar {
-  position: absolute;
-  top: 0;
-  z-index: 100;
-  //background: #f7f7f7;
-}
+// mat-toolbar {
+//   position: absolute;
+//   top: 0;
+//   z-index: 100;
+//   //background: #f7f7f7;
+// }
 
 .mat-icon {
   color: #8896a9;
 }
 
 ul {
-  margin-bottom: 0.4rem !important;
+  // margin-bottom: 0.4rem !important;
   li {
     list-style: none;
     button {
       color: #8896a9;
-      img{
+      img {
         background: white;
         // margin-right: 15px;
       }
