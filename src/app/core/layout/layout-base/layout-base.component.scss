@@ -1,0 +1,25 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+mat-drawer {
+  width: 260px;
+  // background: #555c6b;
+}
+
+mat-drawer-container {
+  height: 100%;
+}
+
+/*
+  Code for minimized side nav size. 
+*/
+// ::ng-deep mat-drawer:not(.mat-drawer-opened) {
+//   transform: translate3d(0, 0, 0) !important;
+//   visibility: visible !important;
+//   display: block !important;
+//   width: 60px !important;
+//   overflow: hidden;
+// }
