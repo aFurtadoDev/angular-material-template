@@ -1,3 +1,43 @@
-<p>
-sign-in works!
-</p>
+<div class="login-wrapper">
+  <form class="login" (ngSubmit)="signIn()">
+    <label class="title">
+      <h3 class="welcome">Welcome to</h3>
+      Company Product Name
+      <h5 class="subtitle">Use your Company ID to sign in or create one now</h5>
+    </label>
+
+    <div class="login-group">
+      <mat-form-field appearance="legacy">
+        <mat-label>Enter some input</mat-label>
+        <input matInput #input minlength="6" placeholder="Ex. Nougat" />
+        <mat-icon matPrefix>account_circle</mat-icon>
+        <!-- <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint> -->
+      </mat-form-field>
+
+      <mat-form-field appearance="legacy">
+        <mat-label>Enter your password</mat-label>
+        <input matInput [type]="hidePassword ? 'password' : 'text'" />
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="hidePassword = !hidePassword"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hidePassword"
+        >
+          <mat-icon>{{
+            hidePassword ? 'visibility_off' : 'visibility'
+          }}</mat-icon>
+        </button>
+        <mat-icon matPrefix>account_circle</mat-icon>
+      </mat-form-field>
+
+      <!-- <input required class="username" name="email" type="text" id="login_username" placeholder="Email"> -->
+
+      <!-- <input required class="password" name="password" type="password" id="login_password" placeholder="Password"> -->
+
+      <button class="btn btn-primary">Login</button>
+
+      <a routerLink="register" class="signup"> Sign up for an Account </a>
+    </div>
+  </form>
+</div>

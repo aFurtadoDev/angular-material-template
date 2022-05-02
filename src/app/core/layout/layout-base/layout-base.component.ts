@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { MatDrawer } from '@angular/material/sidenav';
+import { NavigationEnd, Router } from '@angular/router';
 import { BehaviorSubject, Observable } from 'rxjs';
 
 @Component({
@@ -8,6 +9,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
   styleUrls: ['./layout-base.component.scss'],
 })
 export class LayoutBaseComponent implements OnInit {
+  loggedIn = true;
   sideBarOpen = true;
 
   showToggle: string;
@@ -17,11 +19,13 @@ export class LayoutBaseComponent implements OnInit {
 
   @ViewChild('sidenav') matSidenav: MatDrawer;
 
-  constructor() {}
+  constructor(private router: Router) {
+    console.log(router.url);
+    this.loggedIn = router.url == '/sign-in' ? false : true;
+  }
 
   ngOnInit(): void {
     this.getScreenWidth().subscribe((width) => {
-      console.log(width);
       if (width < 830) {
         this.showToggle = 'show';
         this.mode = 'over';
