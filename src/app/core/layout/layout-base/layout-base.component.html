@@ -3,7 +3,7 @@
     <!-- {{loggedIn}} -->
     <app-side-nav></app-side-nav>
   </mat-drawer>
-  <mat-drawer-content>
+  <mat-drawer-content [ngClass]="{ 'mat-drawer-opened': this.sideBarOpen }">
     <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
     <div class="container">
       <router-outlet></router-outlet>

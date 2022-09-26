@@ -6,6 +6,9 @@
 
 mat-drawer {
   width: 260px;
+  transform: translate3d(0, 0, 0) !important;
+  visibility: visible !important;
+  display: block !important;
   // background: #555c6b;
 }
 
@@ -21,10 +24,17 @@ mat-drawer-container {
 /*
   Code for minimized side nav size. 
 */
-// ::ng-deep mat-drawer:not(.mat-drawer-opened) {
-//   transform: translate3d(0, 0, 0) !important;
-//   visibility: visible !important;
-//   display: block !important;
-//   width: 60px !important;
-//   overflow: hidden;
-// }
+::ng-deep mat-drawer:not(.mat-drawer-opened) {
+  transform: translate3d(0, 0, 0) !important;
+  visibility: visible !important;
+  display: block !important;
+  width: 72px !important;
+  overflow: hidden;
+}
+
+::ng-deep mat-drawer-content:not(.mat-drawer-opened) {
+  transform: translate3d(0, 0, 0) !important;
+
+  margin-left: 72px !important;
+  overflow: hidden;
+}
