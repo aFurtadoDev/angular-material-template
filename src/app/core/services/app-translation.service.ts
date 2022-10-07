@@ -103,5 +103,5 @@ export class AppTranslationService {
 // }
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
-  return new TranslateHttpLoader(http, './assets/configs/i18n/', '.json');
+  return new TranslateHttpLoader(http);
 }
