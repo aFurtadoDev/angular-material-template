@@ -4,7 +4,7 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { AngularMaterialModule } from '../../core/shared/modules/angular-material/angular-material.module';
 import { DashboardComponent } from './dashboard.component';
 import { DataTableModule } from '../shared/data-table/data-table.module';
-import { TranslateModule } from '@ngx-translate/core';
+
 @NgModule({
   imports: [
     CommonModule,
