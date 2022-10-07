@@ -58,7 +58,7 @@ export class DataTableComponent implements OnChanges, OnInit, AfterViewInit {
   @Input() pageSizeOptions: number[] = [];
   @Input() pageSize: number;
   @Input() tableMinWidth = 500;
-  @Input() tableMinHeigth = '0';
+  @Input() tableMinHeigth = 0;
   @Input() isLoadingResults = false;
   @Input() isLoadingResultsFilter = false;
   @Output() filteredData = new EventEmitter<any[]>();
@@ -91,6 +91,8 @@ export class DataTableComponent implements OnChanges, OnInit, AfterViewInit {
   filtersModel = [];
   filterKeys = {};
   filterValue;
+  expandedElement;
+  pageSizeChange;
 
   toggleFilters = true;
 

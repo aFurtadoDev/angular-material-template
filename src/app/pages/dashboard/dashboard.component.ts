@@ -31,7 +31,106 @@ export class DashboardComponent implements OnInit {
   buttons: TableBtn[];
   menuButtons: TableMenu[];
 
-  constructor() {}
+  constructor() {
+    this.data = [
+      {
+        id: 1,
+        first_name: 'First Name',
+        last_name: 'Last Name',
+      },
+    ];
+
+    /**
+     * build the colums;
+     * *columnDef: attribute name;
+     * *header: column title;
+     * *cell: row text
+     * note that the cell attribute is the same as the columnDef attribute
+     */
+    this.columns = [
+      {
+        columnDef: 'id',
+        columnSearch: '',
+        header: 'Id',
+        cell: (element: any) => `${element.id}`,
+        sort: false,
+        directionSort: 'asc',
+        activeSort: false,
+      },
+      {
+        columnDef: 'first_name',
+        columnSearch: 'first_name',
+        header: 'First Name',
+        cell: (element: any) => `${element.first_name}`,
+        sort: false,
+        directionSort: 'asc',
+        activeSort: false,
+      },
+      {
+        columnDef: 'last_name',
+        columnSearch: 'last_name',
+        header: 'Last Name',
+        cell: (element: any) => `${element.last_name}`,
+        sort: false,
+        directionSort: 'asc',
+        activeSort: false,
+      },
+    ];
+
+    /**
+     * build the buttons;
+     * styleClass: button style;
+     * icon: which material icon should be used;
+     * payload: what value from the object should be returned;
+     * action: what name should the action have
+     */
+    this.buttons = [
+      {
+        styleClass: 'btn btn-success px-2',
+        icon: 'fa-eye',
+        iconColor: '#000',
+        payload: (element: any) => element,
+        action: 'view',
+        type: 'btn',
+        disable: (element: any) => false,
+        showHidden: (element: any) => true,
+      },
+    ];
+
+    /**
+     * build the menuButtons;
+     * styleClass: button style;
+     * icon: which material icon should be used;
+     * payload: what value from the object should be returned;
+     * action: what name should the action have
+     */
+    this.menuButtons = [
+      {
+        styleClass: 'btn btn-primary px-2',
+        icon: 'fa-edit',
+        payload: (element: any) => element,
+        action: 'edit',
+        description: 'pages.business.table.menu.edit',
+        disable: (element: any) => {
+          let isDisabled = false;
+
+          return isDisabled;
+        },
+      },
+      {
+        styleClass: 'btn btn-success px-2',
+        icon: 'fa-truck',
+        payload: (element: any) => element,
+        action: 'addShipping',
+        description: 'pages.business.table.menu.shipping',
+        disable: (element: any) => {
+          let isDisabled = false;
+
+          return isDisabled;
+        },
+      },
+    ];
+  }
 
   ngOnInit() {}
 

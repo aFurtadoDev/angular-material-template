@@ -1,6 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -11,7 +11,7 @@ import {
   AppTranslationService,
   HttpLoaderFactory,
 } from './core/services/app-translation.service';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { PaginatorI18n } from './core/utils/components/data-table/paginator-translate';
 import { MatPaginatorIntl } from '@angular/material/paginator';
 
@@ -21,6 +21,8 @@ import { MatPaginatorIntl } from '@angular/material/paginator';
 
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
 
     AngularMaterialModule,
     AppRoutingModule,
