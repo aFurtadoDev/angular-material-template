@@ -50,7 +50,7 @@ export class DashboardComponent implements OnInit {
     this.columns = [
       {
         columnDef: 'id',
-        columnSearch: '',
+        columnSearch: 'idFilter',
         header: 'Id',
         cell: (element: any) => `${element.id}`,
         sort: false,
@@ -59,7 +59,7 @@ export class DashboardComponent implements OnInit {
       },
       {
         columnDef: 'first_name',
-        columnSearch: 'first_name',
+        columnSearch: 'first_nameFilter',
         header: 'First Name',
         cell: (element: any) => `${element.first_name}`,
         sort: false,
@@ -68,7 +68,7 @@ export class DashboardComponent implements OnInit {
       },
       {
         columnDef: 'last_name',
-        columnSearch: 'last_name',
+        columnSearch: 'last_nameFilter',
         header: 'Last Name',
         cell: (element: any) => `${element.last_name}`,
         sort: false,

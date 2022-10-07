@@ -1,0 +1,161 @@
+{
+  "layouts": {
+    "header": {
+      "logout": "Sair",
+      "tooltip": {
+        "userNameActive": "Usuário Ativo!",
+        "userManual": "Manual do Usuário"
+      }
+    },
+    "sideNav": {
+      "systemName": "Sistema de Gerenciamento de Negócios",
+      "menu01": "Página Principal",
+      "menu02": "Prospecção",
+      "menu03": "Negócios",
+      "menu04": "Remessas",
+      "menu05": "Projetos",
+      "menu06": "Propostas",
+      "menu07": "TIC's",
+      "menu08": "Relatórios"
+    }
+  },
+  "network-messages": {
+    "title": {
+      "no-network": "Sem Rede!",
+      "access-denied": "Acesso Negado!",
+      "not-found": "Não encontrado!",
+      "internal-server-error": "Erro interno do servidor!"
+    },
+    "detail": {
+      "no-network": "Não é possível acessar o servidor.",
+      "access-denied": "Seu acesso não tem permissão para esta ação.",
+      "not-found": "O recurso de destino não pode ser encontrado."
+    },
+    "section": {
+      "expired": {
+        "title": "Seção Expirada.",
+        "detail": "A seção atual expirou o tempo de utilização."
+      }
+    },
+    "HttpErrorResponse": {
+      "title": "Resposta de erro HTTP",
+      "message": "Ocorreu um erro de comunição de respost HTTP. <br> Url: ",
+      "original-message": "Mensagem Original: "
+    }
+  },
+  "components": {
+    "dynamic-data-table": {
+      "toolbarTitle": "Lista de Negócios cadastrados",
+      "filter": {
+        "global": {
+          "label": "Buscar",
+          "placeholder": "Utilize o filtro global para buscar por todos os campos..."
+        },
+        "columns": {
+          "label": "",
+          "placeholder": "Digite para buscar..."
+        },
+        "tooltip": {
+          "iconSearchFilter": "Expandir/Retrair filtros",
+          "iconClearFilter": "Limpara campos de filtros"
+        }
+      },
+      "rowTooltip": "Clique duas vezes na linha para visualizar.",
+      "filter-no-record": "Nenhum registro retornado pela consulta.",
+      "no-record": "Nenhum registro encontrado...",
+      "paginator": {
+        "items_per_page_label": "Itens por página:",
+        "next_page_label": "Próxima página",
+        "previous_page_label": "Página anterior",
+        "first_page_label": "Primeira página",
+        "last_page_label": "Última página",
+        "range_page_label_1": "0 de {{length}}",
+        "range_page_label_2": "{{startIndex}} - {{endIndex}} de {{length}}"
+      }
+    },
+    "dynamic-panel-body": {
+      "pages": {
+        "oportunity-crm": {
+          "list": {
+            "title": "",
+            "subTitle": ""
+          },
+          "add": {
+            "title": "",
+            "subTitle": ""
+          },
+          "edit": {
+            "title": "",
+            "subTitle": ""
+          }
+        },
+        "business": {
+          "list": {
+            "title": "",
+            "subTitle": ""
+          },
+          "add": {
+            "title": "",
+            "subTitle": ""
+          },
+          "edit": {
+            "title": "",
+            "subTitle": ""
+          }
+        },
+        "shipping": {
+          "list": {
+            "title": "",
+            "subTitle": ""
+          },
+          "add": {
+            "title": "",
+            "subTitle": ""
+          },
+          "edit": {
+            "title": "",
+            "subTitle": ""
+          }
+        },
+        "proposal": {
+          "list": {
+            "title": "",
+            "subTitle": ""
+          },
+          "add": {
+            "title": "",
+            "subTitle": ""
+          },
+          "edit": {
+            "title": "",
+            "subTitle": ""
+          }
+        },
+        "tic": {
+          "list": {
+            "title": "",
+            "subTitle": ""
+          },
+          "add": {
+            "title": "",
+            "subTitle": ""
+          },
+          "edit": {
+            "title": "",
+            "subTitle": ""
+          }
+        }
+      }
+    },
+    "mat-select": {
+      "select": "Selecione...",
+      "search": {
+        "label": "Buscar...",
+        "placeholder": "Digite para localizar...",
+        "item-not-found": "Item não encontrado."
+      },
+      "no-item": "Nenhum",
+      "loading": "Carregando..."
+    }
+  }
+}
