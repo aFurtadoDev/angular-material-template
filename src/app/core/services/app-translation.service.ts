@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { TranslateLoader, TranslateService } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+// import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { Observable, of, Subject } from 'rxjs';
 
 @Injectable()
@@ -102,6 +102,6 @@ export class AppTranslationService {
 //   }
 // }
 
-export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
-  return new TranslateHttpLoader(http);
-}
+// export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+//   return new TranslateHttpLoader(http);
+// }

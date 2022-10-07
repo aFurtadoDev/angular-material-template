@@ -1,4 +1,12 @@
 import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
+import { HttpClient } from '@angular/common/http';
+import {
   AfterViewInit,
   Component,
   EventEmitter,
@@ -15,6 +23,7 @@ import { MatIconRegistry } from '@angular/material/icon';
 import { MatPaginator, PageEvent } from '@angular/material/paginator';
 import { MatSort, Sort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { timer } from 'rxjs';
 import { AppTranslationService } from '../../../core/services/app-translation.service';
 import { TableBtn } from './interfaces/table-btn';
@@ -25,6 +34,16 @@ import { TableMenu } from './interfaces/table-menu';
   selector: 'app-data-table',
   templateUrl: './data-table.component.html',
   styleUrls: ['./data-table.component.scss'],
+  animations: [
+    trigger('detailExpand', [
+      state('collapsed', style({ height: '0px', minHeight: '0' })),
+      state('expanded', style({ height: '*' })),
+      transition(
+        'expanded <=> collapsed',
+        animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')
+      ),
+    ]),
+  ],
 })
 export class DataTableComponent implements OnChanges, OnInit, AfterViewInit {
   formGroup: FormGroup = new FormGroup({});
