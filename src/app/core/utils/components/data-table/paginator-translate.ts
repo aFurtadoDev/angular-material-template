@@ -1,29 +1,30 @@
 import { MatPaginatorIntl } from '@angular/material/paginator';
+import { TranslateService } from '@ngx-translate/core';
 import { AppTranslationService } from '../../../services/app-translation.service';
 
 export class PaginatorI18n {
   gT = (key: string | Array<string>, interpolateParams?: object) =>
-    this.translationService.getTranslation(key, interpolateParams);
+    this.translationService.getTranslationAsync(key, interpolateParams);
 
   constructor(private translationService: AppTranslationService) {}
 
   getPaginatorIntl(): MatPaginatorIntl {
     const paginatorIntl = new MatPaginatorIntl();
-    paginatorIntl.itemsPerPageLabel = this.gT(
+    this.gT(
       'components.dynamic-data-table.paginator.items_per_page_label'
-    );
-    paginatorIntl.nextPageLabel = this.gT(
+    ).subscribe((s) => (paginatorIntl.itemsPerPageLabel = s));
+    this.gT(
       'components.dynamic-data-table.paginator.next_page_label'
-    );
-    paginatorIntl.previousPageLabel = this.gT(
+    ).subscribe((s) => (paginatorIntl.nextPageLabel = s));
+    this.gT(
       'components.dynamic-data-table.paginator.previous_page_label'
-    );
-    paginatorIntl.firstPageLabel = this.gT(
+    ).subscribe((s) => (paginatorIntl.previousPageLabel = s));
+    this.gT(
       'components.dynamic-data-table.paginator.first_page_label'
-    );
-    paginatorIntl.lastPageLabel = this.gT(
+    ).subscribe((s) => (paginatorIntl.firstPageLabel = s));
+    this.gT(
       'components.dynamic-data-table.paginator.last_page_label'
-    );
+    ).subscribe((s) => (paginatorIntl.lastPageLabel = s));
     paginatorIntl.getRangeLabel = this.getRangeLabel.bind(this);
 
     return paginatorIntl;
@@ -33,12 +34,12 @@ export class PaginatorI18n {
     page: number,
     pageSize: number,
     length: number
-  ): string {
+  ) {
     if (length === 0 || pageSize === 0) {
-      return this.gT(
+      this.gT(
         'components.dynamic-data-table.paginator.range_page_label_1',
         { length }
-      );
+      ).subscribe(s => {return  s});
     }
     length = Math.max(length, 0);
     const startIndex = page * pageSize;
@@ -47,9 +48,9 @@ export class PaginatorI18n {
       startIndex < length
         ? Math.min(startIndex + pageSize, length)
         : startIndex + pageSize;
-    return this.gT(
+    this.gT(
       'components.dynamic-data-table.paginator.range_page_label_2',
       { startIndex: startIndex + 1, endIndex, length }
-    );
+    ).subscribe(s => {return  s});
   }
 }

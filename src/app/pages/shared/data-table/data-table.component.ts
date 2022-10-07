@@ -129,6 +129,7 @@ export class DataTableComponent implements OnChanges, OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
+    console.log(this.data[0])
     this.dataSource.paginator = this.paginator;
 
     // TODO: Implementar controle do CSS para o spinner do loading

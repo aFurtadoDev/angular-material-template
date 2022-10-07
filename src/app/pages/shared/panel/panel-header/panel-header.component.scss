@@ -1,0 +1,52 @@
+.panel-header {
+  height: 140px !important;
+  padding-top: 60px !important;
+  background: #ddd !important;
+  // background: linear-gradient(
+  //   0deg,
+  //   #ff3636 0%,
+  //   #f89393 24%,
+  //   #f7acac 35%,
+  //   #f7b7b7 40%,
+  //   #f6c9c9 56%,
+  //   white 100%
+  // ) !important;
+  // background-image: url(https://img.freepik.com/fotos-gratis/papel-amassado-preto-escuro-fechar-textura_99266-562.jpg)!important;
+}
+
+.panel-header {
+  height: 260px;
+  padding-top: 80px;
+  padding-bottom: 45px;
+  background: #dedede; /* fallback for old browsers */
+  background: linear-gradient(160deg, #dedede 0%, darken(#000, 5) 100%);
+  background-size: 105%;
+  position: relative;
+  overflow: hidden;
+
+  .header {
+    .title {
+      color: #fff;
+    }
+    .category {
+      max-width: 600px;
+      color: #ddd;
+      margin: 0 auto;
+      font-size: 13px;
+
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.panel-header-sm {
+  height: 135px;
+}
+
+.panel-header-lg {
+  height: 380px;
+}
+
+

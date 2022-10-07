@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { TranslateLoader, TranslateService } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 // import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { Observable, of, Subject } from 'rxjs';
 
@@ -70,6 +71,7 @@ export class AppTranslationService {
     key: string | Array<string>,
     interpolateParams?: object
   ): string | any {
+    console.log(key)
     return this.translate.instant(key, interpolateParams);
   }
 
@@ -102,6 +104,6 @@ export class AppTranslationService {
 //   }
 // }
 
-// export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
-//   return new TranslateHttpLoader(http);
-// }
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http);
+}

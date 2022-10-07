@@ -11,12 +11,12 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { PaginatorI18n } from './core/utils/components/data-table/paginator-translate';
 import { MatPaginatorIntl } from '@angular/material/paginator';
-import { AppTranslationService } from './core/services/app-translation.service';
+import { AppTranslationService, HttpLoaderFactory } from './core/services/app-translation.service';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-export function HttpLoaderFactory(httpClient: HttpClient) {
-  return new TranslateHttpLoader(httpClient);
-}
+// export function HttpLoaderFactory(httpClient: HttpClient) {
+//   return new TranslateHttpLoader(httpClient);
+// }
 
 @NgModule({
   imports: [

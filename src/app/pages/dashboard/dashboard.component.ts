@@ -6,6 +6,7 @@ import {
   trigger,
 } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
 import { TableBtn } from '../shared/data-table/interfaces/table-btn';
 import { TableColumn } from '../shared/data-table/interfaces/table-column';
 import { TableMenu } from '../shared/data-table/interfaces/table-menu';
@@ -34,9 +35,11 @@ export class DashboardComponent implements OnInit {
   constructor() {
     this.data = [
       {
-        id: 1,
-        first_name: 'First Name',
-        last_name: 'Last Name',
+
+            id: 1,
+            first_name: 'string',
+            lastName: 'string',
+
       },
     ];
 
