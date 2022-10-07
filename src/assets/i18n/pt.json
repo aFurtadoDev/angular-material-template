@@ -45,7 +45,7 @@
   },
   "components": {
     "dynamic-data-table": {
-      "toolbarTitle": "Lista de Negócios cadastrados",
+      "toolbarTitle": "Título",
       "filter": {
         "global": {
           "label": "Buscar",

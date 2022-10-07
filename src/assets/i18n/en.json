@@ -1,81 +1,81 @@
 {
   "layouts": {
     "header": {
-      "logout": "Sair",
+      "logout": "Logout",
       "tooltip": {
-        "userNameActive": "Usuário Ativo!",
-        "userManual": "Manual do Usuário"
+        "userNameActive": "User Active!",
+        "userManual": "User Manual"
       }
     },
     "sideNav": {
-      "systemName": "Sistema de Gerenciamento de Negócios",
-      "menu01": "Página Principal",
-      "menu02": "Prospecção",
-      "menu03": "Negócios",
-      "menu04": "Remessas",
-      "menu05": "Projetos",
-      "menu06": "Propostas",
+      "systemName": "Business Management System",
+      "menu01": "Main Page",
+      "menu02": "Prospecting",
+      "menu03": "Business",
+      "menu04": "Remittances",
+      "menu05": "Projects",
+      "menu06": "Proposals",
       "menu07": "TIC's",
-      "menu08": "Relatórios"
+      "menu08": "Reports"
     }
   },
   "network-messages": {
     "title": {
-      "no-network": "Sem Rede!",
-      "access-denied": "Acesso Negado!",
-      "not-found": "Não encontrado!",
-      "internal-server-error": "Erro interno do servidor!"
+      "no-network": "No Network!",
+      "access-denied": "Access Denied!",
+      "not-found": "Not found!",
+      "internal-server-error": "Internal server error!"
     },
     "detail": {
-      "no-network": "Não é possível acessar o servidor.",
-      "access-denied": "Seu acesso não tem permissão para esta ação.",
-      "not-found": "O recurso de destino não pode ser encontrado."
+      "no-network": "Cannot access server.",
+      "access-denied": "Your access is not allowed for this action.",
+      "not-found": "The target resource cannot be found."
     },
     "section": {
       "expired": {
-        "title": "Seção Expirada.",
-        "detail": "A seção atual expirou o tempo de utilização."
+        "title": "Section Expired.",
+        "detail": "The current section has expired."
       }
     },
     "HttpErrorResponse": {
-      "title": "Resposta de erro HTTP",
-      "message": "Ocorreu um erro de comunição de respost HTTP. <br> Url: ",
-      "original-message": "Mensagem Original: "
+      "title": "HTTP Error Response",
+      "message": "An HTTP response communication error occurred. <br> Url: ",
+      "original-message": "Original-message: "
     }
   },
   "components": {
     "dynamic-data-table": {
-      "toolbarTitle": "Lista de Negócios cadastrados",
+      "toolbarTitle": "Registered Business List",
       "filter": {
         "global": {
-          "label": "Buscar",
-          "placeholder": "Utilize o filtro global para buscar por todos os campos..."
+          "label": "Search",
+          "placeholder": "Use the global filter to search for all fields..."
         },
         "columns": {
           "label": "",
-          "placeholder": "Digite para buscar..."
+          "placeholder": "Type to fetch..."
         },
         "tooltip": {
-          "iconSearchFilter": "Expandir/Retrair filtros",
-          "iconClearFilter": "Limpara campos de filtros"
+          "iconSearchFilter": "Expand/Collapse filters",
+          "iconClearFilter": "Clears filter fields"
         }
       },
-      "rowTooltip": "Clique duas vezes na linha para visualizar.",
-      "filter-no-record": "Nenhum registro retornado pela consulta.",
-      "no-record": "Nenhum registro encontrado...",
+      "rowTooltip": "Double-click the row to view.",
+      "filter-no-record": "No records returned by the query.",
+      "no-record": "No record found...",
       "paginator": {
-        "items_per_page_label": "Itens por página:",
-        "next_page_label": "Próxima página",
-        "previous_page_label": "Página anterior",
-        "first_page_label": "Primeira página",
-        "last_page_label": "Última página",
-        "range_page_label_1": "0 de {{length}}",
-        "range_page_label_2": "{{startIndex}} - {{endIndex}} de {{length}}"
+        "items_per_page_label": "Items per page:",
+        "next_page_label": "Next page",
+        "previous_page_label": "Previous page",
+        "first_page_label": "First page",
+        "last_page_label": "Last page",
+        "range_page_label_1": "0 of {{length}}",
+        "range_page_label_2": "{{startIndex}} - {{endIndex}} of {{length}}"
       }
     },
     "dynamic-panel-body": {
       "pages": {
-        "oportunity-crm": {
+        "opportunity-crm": {
           "list": {
             "title": "",
             "subTitle": ""
@@ -148,14 +148,14 @@
       }
     },
     "mat-select": {
-      "select": "Selecione...",
+      "select": "Select...",
       "search": {
-        "label": "Buscar...",
-        "placeholder": "Digite para localizar...",
-        "item-not-found": "Item não encontrado."
+        "label": "Search...",
+        "placeholder": "Type to find...",
+        "item-not-found": "Item not found."
       },
-      "no-item": "Nenhum",
-      "loading": "Carregando..."
+      "no-item": "None",
+      "loading": "Loading..."
     }
   }
 }
