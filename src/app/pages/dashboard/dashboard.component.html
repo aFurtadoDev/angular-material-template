@@ -1,1 +1,26 @@
-loggedIn
+<app-data-table
+  [toolbarTitle]=""
+  [toolbar]="false"
+  [columns]="columns"
+  [buttons]="buttons"
+  [menuButtons]=""
+  [data]="data"
+  [filterGlobal]="false"
+  [filterGlobalLabel]=""
+  [filterGlobalPlaceholder]=""
+  [filterColumns]="false"
+  [filterColumnsLabel]="''"
+  [filterColumnsPlaceholder]=""
+  [expandDetail]="false"
+  [footer]=""
+  [pageSizeOptions]="[5]"
+  [pageSize]="5"
+  [tableMinWidth]="400"
+  [tableMinHeigth]="25"
+  [isLoadingResultsFilter]="false"
+  [isLoadingResults]="false"
+  (buttonClick)="buttonClick($event)"
+  (rowDblClick)="rowDblClick($event)"
+  (pageChange)="loadData($event)"
+>
+</app-data-table>
